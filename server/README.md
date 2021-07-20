@@ -4,22 +4,22 @@ Simple CRUD application to log your workouts
 ## Endpoints
 
 ### Register
-![](assets/create-user.png)
+![](server/assets/create-user.png)
 
 ### Login 
-![](assets/login.png)
+![](server/assets/login.png)
 
 ### Create Log
-![](assets/create-log.png)
+![](server/assets/create-log.png)
 
 ### My Logs
-![](assets/my-logs.png)
+![](server/assets/my-logs.png)
 
 ### Search Logs by id
-![](assets/searchlogs-id.png)
+![](server/assets/searchlogs-id.png)
 
 ### Update Log
-![](assets/update-log.png)
+![](server/assets/update-log.png)
 
 ### Delete Log
-![](assets/delete-log.png)
+![](server/assets/delete-log.png)
