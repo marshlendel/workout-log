@@ -13,7 +13,7 @@ router.post("/register", async (req, res) => {
             email,
             password: bcrypt.hashSync(password, 12)
         })
-        let token = jwt.sign({id: newUser.id}, "open_sesame", {expiresIn: 60 * 60 * 48})
+        let token = jwt.sign({id: newUser.id}, process.env.JWT_SECRET, {expiresIn: 60 * 60 * 48})
         res.status(201).json({
             message: "User Created!",
             user: newUser,
@@ -46,7 +46,7 @@ router.post("/login", async (req, res) => {
         if(loggedInUser) {                                      //The password in the database for the selected user
             let passwordComparison = await bcrypt.compare(password, loggedInUser.password)
             if(passwordComparison) {
-                let token = jwt.sign({id: loggedInUser.id}, "open_sesame", {expiresIn: 60 * 60 * 48})
+                let token = jwt.sign({id: loggedInUser.id}, process.env.JWT_SECRET, {expiresIn: 60 * 60 * 48})
                 res.status(200).json({
                     message: "Logged In",
                     user: loggedInUser,
